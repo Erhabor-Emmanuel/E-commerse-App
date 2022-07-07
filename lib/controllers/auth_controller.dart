@@ -1,9 +1,7 @@
-import 'dart:js';
 import 'dart:typed_data';
 import 'package:ecommerce_app/const.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_storage/firebase_storage.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 
@@ -83,7 +81,7 @@ class AuthController {
 
   //Function to retrive password
   forgotPasswoord(String email) async {
-    String res = 'some error occured';
+    String res = 'some error occurred';
     try {
       if (email.isNotEmpty) {
         await firebaseAuth.sendPasswordResetEmail(email: email);

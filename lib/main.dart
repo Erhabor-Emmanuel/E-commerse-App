@@ -1,4 +1,5 @@
 import 'package:ecommerce_app/const.dart';
+import 'package:ecommerce_app/views/screens/auth/forgot_password.dart';
 import 'package:ecommerce_app/views/screens/auth/login_screen.dart';
 import 'package:ecommerce_app/views/screens/auth/register_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -25,7 +26,7 @@ class MyApp extends StatelessWidget {
       // theme: ThemeData.dark().copyWith(
       //   scaffoldBackgroundColor: backgroundColor,
       // ),
-      home: SignupScreen(),
+      home: ForgotPasswordScreen(),
     );
   }
 }

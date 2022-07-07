@@ -28,18 +28,19 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
       _isLoading = false;
     });
 
-    if (res != 'success') {
-      return showSnackBar(res, context);
+    if (res == 'success') {
+      return showSnackBar('Link has been sent to the email address', context);
     } else {
-      Navigator.of(context)
-          .push(MaterialPageRoute(builder: (context) => BottomNavBar()));
+      return showSnackBar(res, context);
     }
   }
 
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
+      body: Container(
+        padding: const EdgeInsets.all(20),
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
               'Forgot Password',
@@ -47,6 +48,9 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
               ),
+            ),
+            SizedBox(
+              height: 20,
             ),
             TextField(
               controller: _emailController,
@@ -63,6 +67,9 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
                   ),
                 ),
               ),
+            ),
+            SizedBox(
+              height: 20,
             ),
             Container(
               width: MediaQuery.of(context).size.width - 40,
