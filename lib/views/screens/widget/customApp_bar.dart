@@ -21,7 +21,7 @@ class CustomAppBar extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                TextSpan(),
+                TextSpan(text: '👀'),
               ],
             ),
           ),
